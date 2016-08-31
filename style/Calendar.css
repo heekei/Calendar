@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{
+	min-width:781px;
+	margin:0;
+}
+/* 左侧边栏 样式 */
+#todayInfo{
+    background: #5caeff;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#5af),to(#73b9ff));
+    background: -moz-linear-gradient(top,#5af,#73b9ff);
+	width:200px;
+	height:255px;
+	float:left;
+	margin-left: calc((100% - 200px - 581px) / 2);
+	margin-top:30px;
+	border-radius:15px 0 0 15px;
+	text-align:center;
+	color:#fff;
+	font-family: arial;
+	font-size:16px;
+	padding:calc((576px - 255px) / 2) 0;
+	/* -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none; */
+	cursor:default;
+}
+	.solarLTime{
+		font: 18px/4em 'Microsoft Yahei';
+		text-align:center;
+	}
+	.today_date{
+		position: relative;
+		width: 75px;
+		height: 75px;
+		margin: 0 auto;
+		line-height: 76px;
+		font-size: 52px;
+		background: #fb0;
+		border-radius: 3px;
+		box-shadow: 1px 2px 5px rgba(0,0,0,.1),-1px 2px 5px rgba(0,0,0,.1);
+	}
+	.lunarTime{
+		font: 18px/24px 'Microsoft Yahei';
+	}
+#right{
+	width:581px;
+	height:572px;
+	margin-top:30px;
+	margin-right: calc((100% - 200px - 600px) / 2);
+	border:2px solid #5caeff;
+	border-left:none;
+	float:left;
+	
+}
+table,tr{
+	border-spacing:0;
+	margin:0 auto;
+	text-align:center;
+	overflow:hidden;
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+	display:block;
+}
+.firstRow_week{
+	border-top:2px solid #5caeff;
+	width:82px;
+	height:36px;
+	font-family:"Microsoft YaHei UI";
+	font-size:20px;
+}
+#title_row{
+	width:579px;
+	height:62px;
+	text-align:center;
+	line-height:3em;
+	margin:0 auto;
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#title_row select{
+	border:none;
+	outline:none;
+	height:22px;
+	font-size:14px;
+	line-height:22px;
+	margin:0 auto;
+	border:1px solid #d8d8d8;
+}
+#title_row select:hover{
+	border:1px solid #5caeff;
+}
+/* 返回今日 按钮样式 */
+#backToday{
+	width:auto;
+	height:20px;
+	line-height:1.5em;
+	display:inline-block;
+	font-family:"Microsoft YaHei UI";
+	font-size:14px;
+	background:#f9f9f9;
+	padding:2px 10px;
+	cursor:pointer;
+	border:1px solid #d8d8d8;
+	border-radius:5px;
+}
+#backToday:hover{
+	border:1px solid #5caeff;
+}
+
+/*年月控制按钮样式*/
+.ctl_YM{
+	height:14px;
+	width:14px;
+	line-height:0.5em;
+	padding:3px;
+	display:inline-block;
+	font-family:"Microsoft YaHei UI";
+	font-size:20px;
+	cursor:pointer;
+	border:grey 1px solid;
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+	background:#f9f9f9;
+}
+.ctl_YM:hover{
+	border:1px solid #5caeff;
+}
+
+/* 日历表样式 */
+#calendar{
+	border-top:1px #d8d8d8 solid;
+	empty-cells:hide;
+	overflow:hidden;
+}
+#calendar tr td{
+	width:77px;
+	height:70px;
+	border:2px solid #fff;
+	cursor:pointer;
+}
+#calendar tr td:hover{
+	border:2px solid #fb0;
+}
+.row_style:not(:first-child){
+	border-top: 1px solid #d8d8d8;
+}
+#calendar tr td.selected{
+	border:2px solid #fb0;
+}
+/* 今日 样式 */
+#calendar tr td#today{
+	background: #fb0;
+	border:2px solid #fb0;
+}
+	/* 今日  日期下的农历样式 */
+	#today .lunar_span{
+		color:#575757;
+		font-size:12px;
+		display:block;
+	}
+/*节假日日期样式*/
+.fes_day{
+	color:grey;
+	font-size:20px;
+	font-family:"Microsoft YaHei UI"; 
+}
+/*普通日日期样式*/
+.normal_day,
+.jq_day{
+	color:grey;
+	font-size:20px;
+	font-family:"Microsoft YaHei UI";
+}
+/*节假日名称样式*/
+.national_Festival{
+	color:#e02d2d;
+	font-size:12px;
+	display:block;
+}
+/*节气名称样式*/
+.jq_Festival{
+	color:#7BB83F;
+	font-size:12px;
+	display:block;
+}
+/* 农历样式 */
+.lunar_span{
+	color:#CBCAC5;
+	font-size:12px;
+	display:block;
+}

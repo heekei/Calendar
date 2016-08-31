@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="content-language" content="zh-CN" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <!-- 引入农历算法 -->
+        <script src="js/LunarDay.js" type="text/javascript"></script>
+    <!-- 万年历主体JS -->
+    <script src="js/calendar.js" type="text/javascript"></script>
+    <link type="text/css" href="style/Calendar.css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="todayInfo"></div>
+    <div id="right">
+    <div id="title_row">
+          <div id="pre_year" class="ctl_YM">&laquo;</div>
+          	<select id="yearList"></select>
+          <div id="next_year" class="ctl_YM">&raquo;</div>
+          <div id="pre_month" class="ctl_YM">&laquo;</div>
+          	<select id="monthList"></select>
+          <div id="next_month" class="ctl_YM">&raquo;</div>
+          <div id="backToday">返回今日</div>
+          <!--<div class="dropdown_menu">
+          	<div class="dropdown_menu_btn_icon_border">
+            	<i class="icon icon_triangle_down"></i>
+            </div>
+          </div>-->
+	</div>
+    <table id="week" width="579" height="48" >
+	</table>
+    <table id="calendar" width="579" >
+    </table>
+    </div>
+</body>
+<script type="text/javascript">
+	var browser=navigator.appName 
+	var b_version=navigator.appVersion 
+	var version=b_version.split(";"); 
+	var trim_Version=version[1].replace(/[ ]/g,""); 
+	if(browser=="Microsoft Internet Explorer" && (trim_Version=="MSIE6.0"||trim_Version=="MSIE7.0")) 
+	{ 
+		document.body.innerHTML="暂不支持IE7.0以下版本浏览器";
+	}
+</script>
+</html>
